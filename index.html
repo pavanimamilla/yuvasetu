@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YuvaSetu — “Bridging Youth, Education &amp; Industry”</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+              800: '#3730a3',
+              900: '#312e81',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="h-full flex flex-col bg-slate-50 text-slate-900 selection:bg-indigo-500 selection:text-white">
+  
+  <!-- Top Navigation Bar Container -->
+  <div id="navbar-container">
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 px-4 sm:px-6 py-2.5 transition-all">
+      <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+        
+        <!-- Logo & Branding -->
+        <div class="flex items-center gap-3">
+          <a href="#/" class="flex items-center gap-2.5 group">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 flex items-center justify-center text-white shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
+              <span class="font-extrabold text-base">YS</span>
+            </div>
+            <div>
+              <span class="text-lg font-black tracking-tight text-slate-900 flex items-center gap-1.5">
+                Yuva<span class="text-indigo-600">Setu</span>
+                <span class="text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-wider bg-indigo-100 text-indigo-700">Official</span>
+              </span>
+              <p class="text-[10px] text-slate-500 font-medium hidden sm:block -mt-0.5">Bridging Youth, Education &amp; Industry</p>
+            </div>
+          </a>
+        </div>
+
+        <!-- Auth CTAs -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a href="#/student/login" class="text-xs font-semibold text-slate-700 hover:text-indigo-600 px-3 py-1.5">Sign In</a>
+          <a href="#/" class="text-xs font-bold bg-indigo-600 text-white hover:bg-indigo-700 px-3.5 py-1.5 rounded-xl shadow-sm">Get Started</a>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Main Body Layout (Sidebar + Content View) -->
+  <div class="flex flex-1 min-h-[calc(100vh-61px)]">
+    <!-- Collapsible Sidebar Container -->
+    <div id="sidebar-container"></div>
+
+    <!-- Active View Main Content Area -->
+    <main id="main-content" class="flex-1 overflow-x-hidden">
+      <!-- Pre-rendered Landing View for instantaneous display -->
+      <div class="relative min-h-[calc(100vh-61px)] flex flex-col justify-between overflow-hidden bg-slate-950 text-slate-100 hero-mesh">
+        <div class="absolute inset-0 grid-pattern pointer-events-none opacity-60"></div>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 flex-1 flex flex-col justify-center">
+          
+          <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-semibold mb-6 backdrop-blur-md">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 animate-ping"></span>
+              YuvaSetu Career &amp; Skills Ecosystem
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
+              Yuva<span class="text-indigo-400">Setu</span> <br/>
+              <span class="bg-gradient-to-r from-indigo-400 via-purple-300 to-cyan-400 bg-clip-text text-transparent">
+                “Bridging Youth, Education &amp; Industry”
+              </span>
+            </h1>
+
+            <p class="mt-4 text-base sm:text-lg text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto">
+              A comprehensive multi-user platform connecting Students, Colleges, and Industry recruiters with real database-backed profiles.
+            </p>
+
+            <div class="mt-8 flex items-center justify-center gap-2 sm:gap-4 text-xs font-medium text-slate-300 flex-wrap">
+              <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-1.5 shadow-sm">
+                🎓 Students Discover
+              </span>
+              <span class="text-slate-500 hidden sm:inline">→</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-1.5 shadow-sm">
+                🏛️ Colleges Analyze
+              </span>
+              <span class="text-slate-500 hidden sm:inline">→</span>
+              <span class="px-3 py-1.5 rounded-lg bg-slate-900/80 border border-slate-800 flex items-center gap-1.5 shadow-sm">
+                💼 Industry Hires
+              </span>
+            </div>
+          </div>
+
+          <!-- 3 Interactive Ecosystem Cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto w-full">
+            
+            <!-- Panel 1: Student -->
+            <div class="gradient-border-card group rounded-2xl bg-slate-900/90 border border-slate-800/80 p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-indigo-950/40">
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-indigo-700 flex items-center justify-center text-white shadow-lg shadow-indigo-500/30 mb-5 text-2xl">
+                  🎓
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Student</h3>
+                <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                  Discover your skills, identify gaps, complete AI tests, and apply for verified jobs &amp; internships.
+                </p>
+                <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                  <li class="flex items-center gap-1.5">✓ Real Student Profiles</li>
+                  <li class="flex items-center gap-1.5">✓ Live CGPA &amp; Skill Updates</li>
+                  <li class="flex items-center gap-1.5">✓ AI Skill Gap Matrix</li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col gap-2">
+                <a href="#/student/login" class="w-full py-2.5 px-3 rounded-xl text-center text-xs font-bold btn-glow flex items-center justify-center gap-1.5">
+                  <span>Continue as Student</span> →
+                </a>
+                <a href="#/student/register" class="text-center text-[11px] text-indigo-400 hover:underline">New Student? Register</a>
+              </div>
+            </div>
+
+            <!-- Panel 2: College -->
+            <div class="gradient-border-card group rounded-2xl bg-slate-900/90 border border-slate-800/80 p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-purple-950/40">
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white shadow-lg shadow-purple-500/30 mb-5 text-2xl">
+                  🏛️
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-tight">College</h3>
+                <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                  Manage campus cohorts, analyze student skill analytics, launch bootcamps, and build industry connections.
+                </p>
+                <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                  <li class="flex items-center gap-1.5">✓ Institutional Analytics</li>
+                  <li class="flex items-center gap-1.5">✓ Student Roster &amp; Tracking</li>
+                  <li class="flex items-center gap-1.5">✓ Training Bootcamps</li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col gap-2">
+                <a href="#/college/login" class="w-full py-2.5 px-3 rounded-xl text-center text-xs font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-lg shadow-purple-600/30 flex items-center justify-center gap-1.5">
+                  <span>Continue as College</span> →
+                </a>
+                <a href="#/college/register" class="text-center text-[11px] text-purple-400 hover:underline">Register Campus</a>
+              </div>
+            </div>
+
+            <!-- Panel 3: Industry / Company -->
+            <div class="gradient-border-card group rounded-2xl bg-slate-900/90 border border-slate-800/80 p-6 flex flex-col justify-between hover:-translate-y-2 transition-all duration-300 shadow-xl shadow-cyan-950/40">
+              <div>
+                <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg shadow-cyan-500/30 mb-5 text-2xl">
+                  🏢
+                </div>
+                <h3 class="text-xl font-bold text-white tracking-tight">Industry</h3>
+                <p class="text-xs text-slate-300 mt-2 leading-relaxed">
+                  Post jobs, benchmark required skills, review AI-ranked candidates, and manage hiring pipelines.
+                </p>
+                <ul class="mt-4 space-y-1.5 text-xs text-slate-400">
+                  <li class="flex items-center gap-1.5">✓ Candidate Match Scoring</li>
+                  <li class="flex items-center gap-1.5">✓ Real Job &amp; Internship Posts</li>
+                  <li class="flex items-center gap-1.5">✓ Applications Kanban</li>
+                </ul>
+              </div>
+
+              <div class="mt-6 pt-5 border-t border-slate-800/80 flex flex-col gap-2">
+                <a href="#/company/login" class="w-full py-2.5 px-3 rounded-xl text-center text-xs font-bold bg-gradient-to-r from-cyan-600 to-blue-600 text-white shadow-lg shadow-cyan-600/30 flex items-center justify-center gap-1.5">
+                  <span>Continue as Industry</span> →
+                </a>
+                <a href="#/company/register" class="text-center text-[11px] text-cyan-400 hover:underline">Register Company</a>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="mt-16 max-w-4xl mx-auto w-full grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80 backdrop-blur-md text-center">
+            <div>
+              <div class="text-2xl font-extrabold text-white">2,450+</div>
+              <div class="text-[11px] font-medium text-slate-400 mt-0.5">Students Enrolled</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-indigo-400">1,820</div>
+              <div class="text-[11px] font-medium text-slate-400 mt-0.5">Assessed with AI</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-cyan-400">94%</div>
+              <div class="text-[11px] font-medium text-slate-400 mt-0.5">Match Accuracy</div>
+            </div>
+            <div>
+              <div class="text-2xl font-extrabold text-purple-400">32+</div>
+              <div class="text-[11px] font-medium text-slate-400 mt-0.5">Industry Partners</div>
+            </div>
+          </div>
+
+        </div>
+
+        <footer class="relative z-10 border-t border-slate-900/80 px-6 py-4 text-center text-xs text-slate-400">
+          YuvaSetu — “Bridging Youth, Education &amp; Industry” · Hackathon Ready Ecosystem
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Global Floating Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 pointer-events-none max-w-sm w-full"></div>
+
+  <!-- Global Modal Dialog Container -->
+  <div id="modal-container"></div>
+
+  <!-- Standalone Application Script (Works with file:// and http://) -->
+  <script src="js/app.bundle.js"></script>
+</body>
+</html>
