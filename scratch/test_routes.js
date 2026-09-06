@@ -18,6 +18,7 @@ global.window = {
 global.document = {
   readyState: 'loading',
   addEventListener: () => {},
+  removeEventListener: () => {},
   getElementById: (id) => ({
     id,
     innerHTML: '',
@@ -82,9 +83,17 @@ console.log('\n--- 1. Testing Unauthenticated / Guest State ---');
 ys.auth.logout();
 allRoutes.forEach(r => testRoute(r, 'guest'));
 
-console.log('\n--- 2. Testing Logged In as Student (Ravi) ---');
-const studentUser = ys.db.findOne('users', u => u.role === 'student');
-ys.auth.login('student', studentUser.email, 'password');
+console.log('\n--- 2. Testing Logged In as Real Student ---');
+let studentUser = ys.db.findOne('users', u => u.role === 'student');
+if (!studentUser) {
+  const reg = ys.auth.register('student', 'test.student@yuvasetu.edu', 'pass123', {
+    name: 'Real Test Student',
+    college_code: 'AIT-BLR-101',
+    college_name: 'Apex Institute'
+  });
+  studentUser = reg.user;
+}
+ys.auth.switchAccount(studentUser.id);
 allRoutes.forEach(r => testRoute(r, 'student'));
 
 console.log('\n--- 3. Testing Logged In as College (Apex) ---');
