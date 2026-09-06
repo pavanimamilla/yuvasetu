@@ -515,7 +515,7 @@ chore: update configuration
 | **Garimella Bindu Srivani** | Backend Developer |
 | **Srivalli** | Database Manager |
 | **Mokshagna** | Backend Developer |
-| **Pavani** | Frontend Developer |
+| **Rupa** | Frontend Developer |
 | **Chandana** | Database Manager |
 
 ---
